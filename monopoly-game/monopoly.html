@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Monopoly</title>
+    <script src="monopoly.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+
+
+</head>
+<body>
+
+    <!--Nav Section-->
+    <section id="nav-section">
+        <nav>
+            <button class="nav-btn" id="new-game-btn">
+                <i class="fas fa-gamepad"></i> New Game
+            </button>
+            <h1>MONOPOLY BANKER</h1>
+            <button class="nav-btn" id="add-player-btn">
+                <i class="fa-sharp fa-solid fa-plus"></i> Add Player
+            </button>
+        </nav>
+    </section>
+
+    <!--Money Transfer Section-->
+    <section class="section-container">
+        <h2>MONEY TRANSFER</h2>
+        <div class="input-wrapper">
+            <div class="input-container">
+                <label for="sender-dropdown">Sender</label>
+                <select name="sender-dropdown" id="sender-dropdown">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+            </div>
+    
+            <div class="input-container">
+                <label for="transfer-amount">Amount</label>
+                <div class="amount-input-wrapper">
+                    <span class="dollar-sign">$</span>
+                    <input type="number" id="transfer-amount" name="transfer-amount" min="1" value="0">
+                </div>
+            </div>
+    
+            <div class="input-container">
+                <label for="receiver-dropdown">Receiver</label>
+                <select name="receiver-dropdown" id="receiver-dropdown">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                </select>
+            </div>
+        </div>
+
+
+        <button class="transfer-btn" id="transfer-btn"> <i> </i> SEND</button>
+    </section>
+    
+<!--Accounts Section-->
+<section class="section-container">        
+    <div class="info-wrapper">
+        <div class="banker-container">
+            <div class="banker-inline">
+                <h2>BANKER</h2>
+                <button class="banker-edit-btn" id="banker-edit-btn"> 
+                    <i class="fas fa-edit"></i> Edit
+                </button>
+            </div>
+            <div id="banker-balance"></div>
+        </div>
+
+        <div class="player-container">
+            <h2>PLAYERS</h2>
+            <table id="players-table">
+                <tbody>
+                    <!-- Players will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+
+</body>
+</html>
