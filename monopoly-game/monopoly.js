@@ -1,5 +1,3 @@
-
-
 class Player {
     constructor(name) {
         this.name = name;
@@ -25,7 +23,6 @@ class MonopolyGame {
         this.players = [];
         this.maxPlayers = 8;
     
-
         //Binding of UI elements
         this.newGameButton = document.getElementById('new-game-btn');
         this.addPlayerButton = document.getElementById('add-player-btn');
@@ -37,7 +34,6 @@ class MonopolyGame {
         this.bankerBalanceDiv = document.getElementById('banker-balance');
         this.playersTable = document.getElementById('players-table');
 
-        
         // Binding of event listeners
         this.newGameButton.addEventListener('click', () => this.newGame());
         this.addPlayerButton.addEventListener('click', () => this.addPlayer());
