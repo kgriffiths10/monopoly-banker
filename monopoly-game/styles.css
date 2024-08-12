@@ -1,28 +1,25 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body{
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+body {
+    padding: 4rem 15%;
     font-family: 'Saira Semi Condensed', sans-serif;
-    font-weight: 500; 
+    font-weight: 500;
+}
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.nav-btn{
+.nav-btn {
     background-color: #FFB74A;
     border: none;
     padding: 1rem;
     height: 100%;
     font-family: 'Saira Semi Condensed', sans-serif;
-    font-weight: 500; 
+    font-weight: 500;
 }
 
 h1 {
@@ -30,48 +27,43 @@ h1 {
     text-align: center;
 }
 
-h2{
+h2 {
     margin: 0;
     padding: 0;
 }
 
-
-
-.section-container{
+.section-container {
     background-color: #EAEAEA;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 2rem 4rem;
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
-
 }
 
 /* Money Transfer Section */
 
-.input-wrapper{
+.input-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 1rem;
     margin-bottom: 1rem;
 }
-.input-container{
+
+.input-container {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.transfer-btn{
+.transfer-btn {
     width: 25%;
     align-self: center;
     padding: 0.5rem;
     border: none;
-    background-color:#1F8505;
+    background-color: #1F8505;
     font-family: 'Saira Semi Condensed', sans-serif;
-    font-weight: 500; /* 500 corresponds to Medium weight */
+    font-weight: 500;
 }
 
 select {
@@ -92,8 +84,8 @@ select {
     position: absolute;
     left: 10px;
     font-size: 1.2rem;
-    color: #888; /* Gray color */
-    pointer-events: none; /* Prevents the dollar sign from blocking clicks */
+    color: #888;
+    pointer-events: none;
 }
 
 #transfer-amount {
@@ -102,13 +94,13 @@ select {
     border: none;
     font-weight: 600;
     font-size: 1.2rem;
-    padding-left: 25px; /* Adjust for the dollar sign */
-    color: #888; /* Default color for the zero */
-    transition: color 0.3s ease; /* Smooth transition for color change */
+    padding-left: 25px;
+    color: #888;
+    transition: color 0.3s ease;
 }
 
 #transfer-amount:focus {
-    color: black; /* Change color on focus */
+    color: black;
 }
 
 #transfer-amount.animating {
@@ -130,33 +122,34 @@ label {
     color: rgb(161, 161, 161);
 }
 
-
 /* Accounts Section */
 
-.info-wrapper{
+.info-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.banker-container{
+.banker-container {
     width: 50%;
 }
-.banker-edit-btn{
+
+.banker-edit-btn {
     background-color: #FFB74A;
     border: none;
     padding: 0.5rem;
 }
 
-.banker-inline{
+.banker-inline {
     display: flex;
     flex-direction: row;
     gap: 2rem;
 }
 
-.player-container{
+.player-container {
     width: 50%;
 }
+
 /* General Table Styling */
 #players-table {
     width: 100%;
@@ -169,23 +162,23 @@ label {
 #players-table td {
     border-bottom: 1px solid #ddd;
     padding: 8px 12px;
-    cursor: pointer; /* Indicate cells are clickable for editing */
+    cursor: pointer;
     text-align: left;
 }
 
 /* Media query for screens smaller than 820 pixels */
-@media (max-width: 1024px) {
+@media (max-width: 820px) {
     /* Nav Section */
-    #nav-section nav {
+    nav {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
     .nav-btn {
-        margin-bottom: 1rem; /* Space between buttons */
-        width: 100%; /* Make buttons full-width for smaller screens */
-        text-align: center; /* Center text in buttons */
+        margin-bottom: 1rem;
+        width: 100%;
+        text-align: center;
     }
 
     /* Money Transfer Section */
@@ -198,22 +191,22 @@ label {
     .input-wrapper {
         flex-direction: column;
         align-items: center;
-        gap: 1rem; /* Adjust gap for vertical alignment */
+        gap: 1rem;
     }
 
     .input-container {
         width: 100%;
-        max-width: 300px; /* Limit width of input containers for smaller screens */
+        max-width: 300px;
     }
 
     #transfer-amount {
         width: 100%;
-        max-width: 300px; /* Limit width for transfer amount input */
+        max-width: 300px;
     }
 
     .transfer-btn {
         width: 100%;
-        max-width: 300px; /* Limit width for transfer button */
+        max-width: 300px;
     }
 
     /* Accounts Section */
@@ -226,7 +219,7 @@ label {
     .banker-container,
     .player-container {
         width: 100%;
-        max-width: 600px; /* Limit width for account sections */
+        max-width: 600px;
     }
 
     .banker-inline {
@@ -234,10 +227,4 @@ label {
         align-items: center;
         text-align: center;
     }
-
-   
-
-
-
-
-
+}
